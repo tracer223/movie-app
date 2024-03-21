@@ -4,7 +4,7 @@ package dev.moviesapp.movie;
 public record Movie(
     Integer id,
     String title,
-    String artwork,
+    String plot,
     Integer year
 ) 
 {}
