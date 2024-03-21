@@ -1,15 +1,17 @@
+package dev.moviesapp.movie;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class OmdbApiService {
+public class MovieService {
 
     private final RestTemplate restTemplate;
     private final String omdbApiBaseUrl;
     private final String omdbApiKey;
 
-    public OmdbApiService(RestTemplate restTemplate,
+    public MovieService(RestTemplate restTemplate,
                           @Value("${omdb.api.base-url}") String omdbApiBaseUrl,
                           @Value("${omdb.api.key}") String omdbApiKey) {
         this.restTemplate = restTemplate;
