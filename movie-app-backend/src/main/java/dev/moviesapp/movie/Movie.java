@@ -1,10 +1,12 @@
 package dev.moviesapp.movie;
 
 
-public record Movie(
-    Integer id,
-    String title,
-    String plot,
-    Integer year
-) 
-{}
+public class Movie {
+    private String title;
+    private int year;
+
+    public Movie(String title, int year) {
+        this.title = title;
+        this.year = year;
+    }
+}
