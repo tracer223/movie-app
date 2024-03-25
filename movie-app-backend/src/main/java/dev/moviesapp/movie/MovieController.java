@@ -1,5 +1,6 @@
 package dev.moviesapp.movie;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,8 @@ public class MovieController {
 
     @GetMapping("/search")
     public ResponseEntity<List<Movie>> searchMovies(@RequestParam String title) {
-        List<Movie> movies = movieService.searchMovieByTitle(title);
+        List<Movie> movies = new ArrayList<>();
+        movieService.searchMovieByTitle(title);
         return ResponseEntity.ok(movies);
     }
 
