@@ -1,11 +1,19 @@
 import React from 'react';
 
 function MyForm() {
-  const handleSubmit = (event) => {
+  state = {
+    movies: []
+  };
+
+  
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     const query = formData.get('query');
-    alert(`You searched for '${query}'`);
+    // alert(`You searched for '${query}'`);
+    const response = await fetch("/search/" + query);
+    const body = await response.json();
+    this.setState({movies: body});
   };
 
   return (

@@ -5,6 +5,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class Movie {
     private String title;
+    private String imdbId;
+    private int year;
+    
     public String getTitle() {
         return title;
     }
@@ -23,7 +26,6 @@ public class Movie {
     public void setYear(int year) {
         this.year = year;
     }
-    private String imdbId;
-    private int year;
+    
     
 }

@@ -20,7 +20,7 @@ public class MovieService {
     }
 
     public Movie searchMovieByTitle(String title) {
-        String url = omdbApiBaseUrl + "?apikey=" + omdbApiKey + "&t=" + title;
+        String url = omdbApiBaseUrl + "?apikey=" + omdbApiKey + "&s=" + title;
         return restTemplate.getForObject(url, Movie.class);
     }
 

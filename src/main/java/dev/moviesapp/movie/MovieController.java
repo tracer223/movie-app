@@ -23,7 +23,8 @@ public class MovieController {
     @GetMapping("/search")
     public ResponseEntity<List<Movie>> searchMovies(@RequestParam String title) {
         List<Movie> movies = new ArrayList<>();
-        movieService.searchMovieByTitle(title);
+        movies.add(movieService.searchMovieByTitle(title));
+        System.out.println(Array.toString(movies));
         return ResponseEntity.ok(movies);
     }
 
