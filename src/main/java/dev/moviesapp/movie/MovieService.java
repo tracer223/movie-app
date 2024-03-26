@@ -29,6 +29,11 @@ public class MovieService {
         return restTemplate.getForObject(url, Movie.class);
     }
 
+    public Movie getMovieDetailsByTitle(String title) {
+        String url = omdbApiBaseUrl + "?apikey=" + omdbApiKey + "&t=" + title;
+        return restTemplate.getForObject(url, Movie.class);
+    }
+
     // Other methods for fetching additional information about movies
 
     // Define your Movie class with relevant fields (title, year, plot, etc.)
