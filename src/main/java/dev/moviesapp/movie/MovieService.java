@@ -2,6 +2,7 @@ package dev.moviesapp.movie;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
 @Service
@@ -30,9 +31,14 @@ public class MovieService {
     }
 
     public Movie getMovieDetailsByTitle(String title) {
+    try {
         String url = omdbApiBaseUrl + "?apikey=" + omdbApiKey + "&t=" + title;
         return restTemplate.getForObject(url, Movie.class);
+    } catch (RestClientException e) {
+        throw new MovieServiceException("Failed to retrieve movie details from the external API", e);
     }
+}
+
 
     // Other methods for fetching additional information about movies
 
