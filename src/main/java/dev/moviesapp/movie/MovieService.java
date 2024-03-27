@@ -39,11 +39,4 @@ public class MovieService {
     }
 }
 
-
-    // Other methods for fetching additional information about movies
-
-    // Define your Movie class with relevant fields (title, year, plot, etc.)
-    // ...
-
-    // You can also handle exceptions, logging, and other aspects as needed.
 }
