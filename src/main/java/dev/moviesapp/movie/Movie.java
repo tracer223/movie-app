@@ -5,210 +5,310 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 public class Movie {
-    private String Title;
-    private String Year;
-    private String Rated;
-    private String Released;
-    private String Runtime;
-    private String Genre;
-    private String Director;
-    private String Writer;
-    private String Actors;
-    private String Plot;
-    private String Language;
-    private String Country;
-    private String Awards;
-    private String Poster;
-    private List<Rating> Ratings;
-    private String Metascore;
+    @JsonProperty("Title")
+    private String title;
+
+    @JsonProperty("Year")
+    private String year;
+
+    @JsonProperty("Rated")
+    private String rated;
+
+    @JsonProperty("Released")
+    private String released;
+
+    @JsonProperty("Runtime")
+    private String runtime;
+
+    @JsonProperty("Genre")
+    private String genre;
+
+    @JsonProperty("Director")
+    private String director;
+
+    @JsonProperty("Writer")
+    private String writer;
+
+    @JsonProperty("Actors")
+    private String actors;
+
+    @JsonProperty("Plot")
+    private String plot;
+
+    @JsonProperty("Language")
+    private String language;
+
+    @JsonProperty("Country")
+    private String country;
+
+    @JsonProperty("Awards")
+    private String awards;
+
+    @JsonProperty("Poster")
+    private String poster;
+
+    @JsonProperty("Ratings")
+    private List<Rating> ratings;
+
+    @JsonProperty("Metascore")
+    private String metascore;
+
+    @JsonProperty("imdbRating")
     private String imdbRating;
+
+    @JsonProperty("imdbVotes")
     private String imdbVotes;
+
+    @JsonProperty("imdbID")
     private String imdbID;
-    private String Type;
-    private String DVD;
-    private String BoxOffice;
-    private String Production;
-    private String Website;
-    private String Response;
+
+    @JsonProperty("Type")
+    private String type;
+
+    @JsonProperty("DVD")
+    private String dvd;
+
+    @JsonProperty("BoxOffice")
+    private String boxOffice;
+
+    @JsonProperty("Production")
+    private String production;
+
+    @JsonProperty("Website")
+    private String website;
+
+    @JsonProperty("Response")
+    private String response;
+
     public Movie(String title, String year, String rated, String released, String runtime, String genre,
             String director, String writer, String actors, String plot, String language, String country, String awards,
             String poster, List<Rating> ratings, String metascore, String imdbRating, String imdbVotes, String imdbID,
-            String type, String dVD, String boxOffice, String production, String website, String response) {
-        Title = title;
-        Year = year;
-        Rated = rated;
-        Released = released;
-        Runtime = runtime;
-        Genre = genre;
-        Director = director;
-        Writer = writer;
-        Actors = actors;
-        Plot = plot;
-        Language = language;
-        Country = country;
-        Awards = awards;
-        Poster = poster;
-        Ratings = ratings;
-        Metascore = metascore;
+            String type, String dvd, String boxOffice, String production, String website, String response) {
+        this.title = title;
+        this.year = year;
+        this.rated = rated;
+        this.released = released;
+        this.runtime = runtime;
+        this.genre = genre;
+        this.director = director;
+        this.writer = writer;
+        this.actors = actors;
+        this.plot = plot;
+        this.language = language;
+        this.country = country;
+        this.awards = awards;
+        this.poster = poster;
+        this.ratings = ratings;
+        this.metascore = metascore;
         this.imdbRating = imdbRating;
         this.imdbVotes = imdbVotes;
         this.imdbID = imdbID;
-        Type = type;
-        DVD = dVD;
-        BoxOffice = boxOffice;
-        Production = production;
-        Website = website;
-        Response = response;
+        this.type = type;
+        this.dvd = dvd;
+        this.boxOffice = boxOffice;
+        this.production = production;
+        this.website = website;
+        this.response = response;
     }
+
     public String getTitle() {
-        return Title;
+        return title;
     }
+
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
+
     public String getYear() {
-        return Year;
+        return year;
     }
+
     public void setYear(String year) {
-        Year = year;
+        this.year = year;
     }
+
     public String getRated() {
-        return Rated;
+        return rated;
     }
+
     public void setRated(String rated) {
-        Rated = rated;
+        this.rated = rated;
     }
+
     public String getReleased() {
-        return Released;
+        return released;
     }
+
     public void setReleased(String released) {
-        Released = released;
+        this.released = released;
     }
+
     public String getRuntime() {
-        return Runtime;
+        return runtime;
     }
+
     public void setRuntime(String runtime) {
-        Runtime = runtime;
+        this.runtime = runtime;
     }
+
     public String getGenre() {
-        return Genre;
+        return genre;
     }
+
     public void setGenre(String genre) {
-        Genre = genre;
+        this.genre = genre;
     }
+
     public String getDirector() {
-        return Director;
+        return director;
     }
+
     public void setDirector(String director) {
-        Director = director;
+        this.director = director;
     }
+
     public String getWriter() {
-        return Writer;
+        return writer;
     }
+
     public void setWriter(String writer) {
-        Writer = writer;
+        this.writer = writer;
     }
+
     public String getActors() {
-        return Actors;
+        return actors;
     }
+
     public void setActors(String actors) {
-        Actors = actors;
+        this.actors = actors;
     }
+
     public String getPlot() {
-        return Plot;
+        return plot;
     }
+
     public void setPlot(String plot) {
-        Plot = plot;
+        this.plot = plot;
     }
+
     public String getLanguage() {
-        return Language;
+        return language;
     }
+
     public void setLanguage(String language) {
-        Language = language;
+        this.language = language;
     }
+
     public String getCountry() {
-        return Country;
+        return country;
     }
+
     public void setCountry(String country) {
-        Country = country;
+        this.country = country;
     }
+
     public String getAwards() {
-        return Awards;
+        return awards;
     }
+
     public void setAwards(String awards) {
-        Awards = awards;
+        this.awards = awards;
     }
+
     public String getPoster() {
-        return Poster;
+        return poster;
     }
+
     public void setPoster(String poster) {
-        Poster = poster;
+        this.poster = poster;
     }
+
     public List<Rating> getRatings() {
-        return Ratings;
+        return ratings;
     }
+
     public void setRatings(List<Rating> ratings) {
-        Ratings = ratings;
+        this.ratings = ratings;
     }
+
     public String getMetascore() {
-        return Metascore;
+        return metascore;
     }
+
     public void setMetascore(String metascore) {
-        Metascore = metascore;
+        this.metascore = metascore;
     }
+
     public String getImdbRating() {
         return imdbRating;
     }
+
     public void setImdbRating(String imdbRating) {
         this.imdbRating = imdbRating;
     }
+
     public String getImdbVotes() {
         return imdbVotes;
     }
+
     public void setImdbVotes(String imdbVotes) {
         this.imdbVotes = imdbVotes;
     }
+
     public String getImdbID() {
         return imdbID;
     }
+
     public void setImdbID(String imdbID) {
         this.imdbID = imdbID;
     }
+
     public String getType() {
-        return Type;
+        return type;
     }
+
     public void setType(String type) {
-        Type = type;
+        this.type = type;
     }
-    public String getDVD() {
-        return DVD;
+
+    public String getDvd() {
+        return dvd;
     }
-    public void setDVD(String dVD) {
-        DVD = dVD;
+
+    public void setDvd(String dvd) {
+        this.dvd = dvd;
     }
+
     public String getBoxOffice() {
-        return BoxOffice;
+        return boxOffice;
     }
+
     public void setBoxOffice(String boxOffice) {
-        BoxOffice = boxOffice;
+        this.boxOffice = boxOffice;
     }
+
     public String getProduction() {
-        return Production;
+        return production;
     }
+
     public void setProduction(String production) {
-        Production = production;
+        this.production = production;
     }
+
     public String getWebsite() {
-        return Website;
+        return website;
     }
+
     public void setWebsite(String website) {
-        Website = website;
+        this.website = website;
     }
+
     public String getResponse() {
-        return Response;
+        return response;
     }
+
     public void setResponse(String response) {
-        Response = response;
+        this.response = response;
     }
 }
 
