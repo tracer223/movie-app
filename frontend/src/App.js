@@ -1,6 +1,6 @@
 import './App.css';
-import './components/MovieDetails.js'
-import MovieDetails from './components/MovieDetails.js';
+import './components/MovieSearch.js'
+import MovieSearch from './components/MovieSearch.js';
 
 function App() {
   
@@ -10,7 +10,7 @@ function App() {
         <p>
           Search For Movie in form below
         </p>
-          <MovieDetails />
+          <MovieSearch />
       </header>
     </div>
   );
