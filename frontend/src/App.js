@@ -1,6 +1,6 @@
 import './App.css';
-import './components/SimpleForm.js'
-import MyForm from './components/SimpleForm.js';
+import './components/MovieDetails.js'
+import MovieDetails from './components/MovieDetails.js';
 
 function App() {
   
@@ -10,7 +10,7 @@ function App() {
         <p>
           Search For Movie in form below
         </p>
-          <MyForm />
+          <MovieDetails />
       </header>
     </div>
   );
