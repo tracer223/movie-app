@@ -1,6 +1,5 @@
 package dev.moviesapp.movie;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,10 +29,8 @@ public class MovieController {
 
     @GetMapping("/search")
     public ResponseEntity<List<Movie>> searchMovies(@RequestParam String title) {
-        Movie movie = movieService.getMovieDetailsByTitle(title);
-        List<Movie> search = new ArrayList<>();
-        search.add(movie);
-        return ResponseEntity.ok(search);
+        List<Movie> movies = movieService.searchMovies(title);
+        return ResponseEntity.ok(movies);
     }
 
     @GetMapping("/details/{imdbId}")
