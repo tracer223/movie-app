@@ -1,6 +1,9 @@
 package dev.moviesapp.movie;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
@@ -20,9 +23,11 @@ public class MovieService {
         this.omdbApiKey = omdbApiKey;
     }
 
-    public Movie searchMovieByTitle(String title) {
+    public List<Movie> searchMovies(String title) {
         String url = omdbApiBaseUrl + "?apikey=" + omdbApiKey + "&s=" + title;
-        return restTemplate.getForObject(url, Movie.class);
+        ResponseEntity<SearchResponse> responseEntity = restTemplate.getForEntity(url, SearchResponse.class);
+        SearchResponse searchResponse = responseEntity.getBody();
+        return searchResponse != null ? searchResponse.getSearch() : null;
     }
 
     public Movie getMovieDetailsByImdbId(String imdbId) {
