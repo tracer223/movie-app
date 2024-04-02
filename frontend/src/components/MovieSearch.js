@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const MovieSearch = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [apiKey, setApiKey] = useState('');
 
   useEffect(() => {
-    axios.get('/api-key')
-      .then(response => {
-        const apiKey = response.data;
-        console.log(apiKey);
-      })
-      .catch(error => {
+    const fetchApiKey = async () => {
+      try {
+        const response = await fetch('/api-key');
+        const apiKeyData = await response.text();
+        setApiKey(apiKeyData); 
+      } catch (error) {
         console.error('Error fetching API key:', error);
-      });
+      }
+    };
+
+    fetchApiKey();
   }, []);
 
   const handleSearch = async () => {
