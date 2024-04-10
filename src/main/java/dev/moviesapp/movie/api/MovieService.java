@@ -1,4 +1,4 @@
-package dev.moviesapp.movie;
+package dev.moviesapp.movie.api;
 
 import java.util.List;
 
@@ -7,6 +7,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
+
+import dev.moviesapp.movie.exception.MovieServiceException;
+import dev.moviesapp.movie.pojo.Movie;
+import dev.moviesapp.movie.pojo.SearchResponse;
 
 @Service
 public class MovieService {

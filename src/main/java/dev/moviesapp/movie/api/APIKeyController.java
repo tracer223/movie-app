@@ -1,4 +1,4 @@
-package dev.moviesapp.movie;
+package dev.moviesapp.movie.api;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;

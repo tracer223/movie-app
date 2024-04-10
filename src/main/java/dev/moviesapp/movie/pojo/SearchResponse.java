@@ -1,4 +1,6 @@
+package dev.moviesapp.movie.pojo;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 public class SearchResponse {

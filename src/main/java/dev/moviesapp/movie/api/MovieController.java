@@ -1,4 +1,4 @@
-package dev.moviesapp.movie;
+package dev.moviesapp.movie.api;
 
 import java.util.List;
 
@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import dev.moviesapp.movie.pojo.Movie;
 
 @RestController
 @RequestMapping("/api/movies")

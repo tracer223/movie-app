@@ -1,4 +1,4 @@
-package dev.moviesapp.movie;
+package dev.moviesapp.movie.exception;
 
 public class MovieServiceException extends RuntimeException {
 

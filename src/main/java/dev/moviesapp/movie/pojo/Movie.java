@@ -1,4 +1,4 @@
-package dev.moviesapp.movie;
+package dev.moviesapp.movie.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
